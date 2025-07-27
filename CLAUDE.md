@@ -10,6 +10,10 @@ This is a syncscripts repository containing bash aliases and an installation scr
 
 ### bash_aliases
 The main aliases file (`/Users/amit/repos/syncscripts/bash_aliases`) contains categorized shell aliases:
+- GhostTTY configuration shortcuts (edit-config)
+- Claude AI assistant shortcuts (ask, claude-update)
+
+**Note**: This is currently a minimal set focused on specific tools. The repository structure supports adding more categorized aliases like:
 - Directory navigation shortcuts (ll, la, .., ..., etc.)
 - Git command shortcuts (gs, ga, gc, gp, etc.)
 - System utilities (grep with color, history, path display)
@@ -25,6 +29,8 @@ Installation script that automatically adds the bash_aliases file to shell profi
 - Supports both bash (.bashrc, .bash_profile) and zsh (.zshrc)
 - Prevents duplicate installations by checking for existing source lines
 - Creates shell profile files if they don't exist
+- Sets up both syncscripts aliases and personal aliases ($HOME/.bash_aliases)
+- Enhanced duplicate detection for both repo and personal alias sources
 
 ## Common Development Tasks
 

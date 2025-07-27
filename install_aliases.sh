@@ -12,14 +12,10 @@ ALIASES_FILE="$SCRIPT_DIR/bash_aliases"
 # Function to add source line to a file
 add_source_line() {
     local file="$1"
-    local source_line="# Syncscripts aliases"
-    local source_command="source \"$ALIASES_FILE\""
-    
-    # Check if the source line already exists
-    if grep -q "source.*bash_aliases" "$file" 2>/dev/null; then
-        echo "Aliases already sourced in $file"
-        return 0
-    fi
+    local repo_source_line="# Syncscripts aliases"
+    local repo_source_command="source \"$ALIASES_FILE\""
+    local personal_source_line="# Personal aliases"
+    local personal_source_command="source \"\$HOME/.bash_aliases\""
     
     # Create the file if it doesn't exist
     if [[ ! -f "$file" ]]; then
@@ -27,11 +23,40 @@ add_source_line() {
         echo "Created $file"
     fi
     
-    # Add the source lines
-    echo "" >> "$file"
-    echo "$source_line" >> "$file"
-    echo "$source_command" >> "$file"
-    echo "Added aliases source to $file"
+    # Check if repo aliases are already sourced
+    local repo_exists=false
+    if grep -q "source.*$ALIASES_FILE" "$file" 2>/dev/null || grep -q "source.*syncscripts.*bash_aliases" "$file" 2>/dev/null; then
+        echo "Syncscripts aliases already sourced in $file"
+        repo_exists=true
+    fi
+    
+    # Check if personal aliases are already sourced
+    local personal_exists=false
+    if grep -q "source.*\$HOME/\.bash_aliases" "$file" 2>/dev/null || grep -q "source \$HOME/\.bash_aliases" "$file" 2>/dev/null; then
+        echo "Personal aliases already sourced in $file"
+        personal_exists=true
+    fi
+    
+    # Add repo aliases if not present
+    if [[ "$repo_exists" == false ]]; then
+        echo "" >> "$file"
+        echo "$repo_source_line" >> "$file"
+        echo "$repo_source_command" >> "$file"
+        echo "Added syncscripts aliases source to $file"
+    fi
+    
+    # Add personal aliases if not present
+    if [[ "$personal_exists" == false ]]; then
+        echo "" >> "$file"
+        echo "$personal_source_line" >> "$file"
+        echo "$personal_source_command" >> "$file"
+        echo "Added personal aliases source to $file"
+    fi
+    
+    # Return success if nothing was added
+    if [[ "$repo_exists" == true && "$personal_exists" == true ]]; then
+        return 0
+    fi
 }
 
 # Function to detect and setup bash profile
@@ -96,6 +121,7 @@ main() {
     echo "Installation complete!"
     echo "To use the aliases immediately, run:"
     echo "  source \"$ALIASES_FILE\""
+    echo "  source \"\$HOME/.bash_aliases\"  # if you have personal aliases"
     echo "Or restart your terminal."
 }
 

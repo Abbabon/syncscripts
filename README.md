@@ -7,7 +7,7 @@ A simple command-line tool to sync bash aliases and shell configurations across 
 - **Cross-platform**: Works on macOS and Linux
 - **Shell agnostic**: Supports both bash and zsh
 - **Safe installation**: Prevents duplicate installations
-- **Comprehensive aliases**: 50+ useful aliases for development and system administration
+- **Extensible aliases**: Starter set with structure for adding more aliases
 
 ## Quick Start
 
@@ -31,15 +31,10 @@ A simple command-line tool to sync bash aliases and shell configurations across 
 
 The `bash_aliases` file contains organized aliases for:
 
-- **Directory navigation**: `ll`, `la`, `..`, `...`
-- **Git shortcuts**: `gs`, `ga`, `gc`, `gp`, `gl`, `glog`
-- **System utilities**: `grep`, `df`, `du`, `mount`
-- **Safety aliases**: `rm -i`, `cp -i`, `mv -i`
-- **Docker commands**: `dps`, `di`, `dex`
-- **Python shortcuts**: `py`, `pip`, `venv`
-- **Process management**: `psg`, `myps`, `psmem`
-- **Archive operations**: `mktar`, `untar`, `mkgz`
-- **System monitoring**: `meminfo`, `cpuinfo`, `pscpu`
+- **GhostTTY configuration**: `edit-config` - Opens GhostTTY config in Sublime Text
+- **Claude AI assistant**: `ask` - Quick Claude prompt interface, `claude-update` - Update Claude Code
+
+**Note**: This is currently a minimal starter set. The repository structure supports adding more aliases as needed.
 
 ## How It Works
 
@@ -47,12 +42,13 @@ The installation script:
 
 1. Detects your operating system and shell
 2. Locates the appropriate shell profile file (`.bashrc`, `.bash_profile`, or `.zshrc`)
-3. Adds a source line to load the aliases
+3. Adds source lines to load both the repository aliases and personal aliases
 4. Creates the profile file if it doesn't exist
+5. Prevents duplicate installations with enhanced detection
 
 ## Customization
 
-Edit the `bash_aliases` file to add your own aliases. The changes will be available after sourcing your shell profile or restarting your terminal.
+Edit the `bash_aliases` file to add your own aliases, or create a personal `~/.bash_aliases` file for machine-specific aliases. The changes will be available after sourcing your shell profile or restarting your terminal.
 
 ## Syncing Across Computers
 

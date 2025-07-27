@@ -4,3 +4,7 @@
 
 # GhostTTY configuration alias
 alias edit-config='subl "/Users/mit/Library/Application Support/com.mitchellh.ghostty/config"'
+
+# Claude AI assistant alias
+alias ask='claude -p'
+alias claude-update='cd ~/.claude/local && npm update @anthropic-ai/claude-code'
