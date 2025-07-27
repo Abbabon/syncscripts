@@ -8,6 +8,7 @@ A simple command-line tool to sync bash aliases and shell configurations across 
 - **Shell agnostic**: Supports both bash and zsh
 - **Safe installation**: Prevents duplicate installations
 - **Extensible aliases**: Starter set with structure for adding more aliases
+- **Claude Code integration**: Automated workflows with `/sync` command
 
 ## Quick Start
 
@@ -49,6 +50,16 @@ The installation script:
 ## Customization
 
 Edit the `bash_aliases` file to add your own aliases, or create a personal `~/.bash_aliases` file for machine-specific aliases. The changes will be available after sourcing your shell profile or restarting your terminal.
+
+## Claude Code Integration
+
+The repository includes Claude Code integration for streamlined development:
+
+- **`.claude/` directory**: Contains Claude Code settings and custom commands
+- **`/sync` command**: Automates documentation updates, git commits, and repository syncing
+- **Automated workflows**: Maintains consistent documentation and git history
+
+Use the `/sync` command in Claude Code to automatically update documentation and sync changes to the repository.
 
 ## Syncing Across Computers
 

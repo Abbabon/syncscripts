@@ -32,6 +32,12 @@ Installation script that automatically adds the bash_aliases file to shell profi
 - Sets up both syncscripts aliases and personal aliases ($HOME/.bash_aliases)
 - Enhanced duplicate detection for both repo and personal alias sources
 
+### .claude/
+Claude Code integration directory containing:
+- **settings.local.json** - Local Claude Code settings and configuration
+- **commands/sync.md** - Custom `/sync` command for automated git workflows
+- Enables seamless AI-assisted development and automated sync operations
+
 ## Common Development Tasks
 
 ### Installing Aliases
@@ -50,6 +56,15 @@ After modifying `bash_aliases`:
 source bash_aliases
 # or use the provided alias
 reload
+```
+
+### Using Claude Code Integration
+The repository includes Claude Code integration for automated workflows:
+```bash
+# Use the /sync command in Claude Code to:
+# - Update documentation (CLAUDE.md, README.md)
+# - Create git commits with proper formatting
+# - Push changes to the repository
 ```
 
 ### Architecture Notes

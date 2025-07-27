@@ -14,10 +14,10 @@ description: commit, update files, push
 
 Based on the above changes:
 
-1. create a git commit
+1. update CLAUDE.md with the changes
 
-2. update CLAUDE.md with the changes
+2. update README.md with the changes
 
-3. update README.md with the changes
+3. create a git commit
 
 4. push to git
