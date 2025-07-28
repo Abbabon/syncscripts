@@ -12,10 +12,12 @@ This is a syncscripts repository containing bash aliases and an installation scr
 The main aliases file (`/Users/amit/repos/syncscripts/bash_aliases`) contains categorized shell aliases:
 - GhostTTY configuration shortcuts (edit-config)
 - Claude AI assistant shortcuts (ask, claude-update)
+- Git utilities (git-filelog, git-filemeta, git-sweep)
+- Development tools (mcp-inspector)
 
-**Note**: This is currently a minimal set focused on specific tools. The repository structure supports adding more categorized aliases like:
+**Note**: The repository structure supports adding more categorized aliases. Current categories include git utilities and development tools, with potential for expansion to include:
 - Directory navigation shortcuts (ll, la, .., ..., etc.)
-- Git command shortcuts (gs, ga, gc, gp, etc.)
+- Additional git command shortcuts (gs, ga, gc, gp, etc.)
 - System utilities (grep with color, history, path display)
 - Safety aliases (interactive rm, cp, mv)
 - Docker shortcuts (dps, di, dex)

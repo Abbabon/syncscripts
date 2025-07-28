@@ -34,8 +34,10 @@ The `bash_aliases` file contains organized aliases for:
 
 - **GhostTTY configuration**: `edit-config` - Opens GhostTTY config in Sublime Text
 - **Claude AI assistant**: `ask` - Quick Claude prompt interface, `claude-update` - Update Claude Code
+- **Git utilities**: `git-filelog` - File commit history, `git-filemeta` - File metadata log, `git-sweep` - Reset and clean repository
+- **Development tools**: `mcp-inspector` - Launch MCP protocol inspector
 
-**Note**: This is currently a minimal starter set. The repository structure supports adding more aliases as needed.
+**Note**: The repository includes essential git and development utilities, with structure supporting additional alias categories as needed.
 
 ## How It Works
 
