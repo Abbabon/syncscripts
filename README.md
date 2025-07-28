@@ -57,6 +57,7 @@ The repository includes Claude Code integration for streamlined development:
 
 - **`.claude/` directory**: Contains Claude Code settings and custom commands
 - **`/sync` command**: Automates documentation updates, git commits, and repository syncing
+- **`syncscripts.code-workspace`**: VS Code workspace file for optimal development experience
 - **Automated workflows**: Maintains consistent documentation and git history
 
 Use the `/sync` command in Claude Code to automatically update documentation and sync changes to the repository.

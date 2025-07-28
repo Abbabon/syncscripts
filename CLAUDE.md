@@ -38,6 +38,12 @@ Claude Code integration directory containing:
 - **commands/sync.md** - Custom `/sync` command for automated git workflows
 - Enables seamless AI-assisted development and automated sync operations
 
+### syncscripts.code-workspace
+VS Code workspace file for optimal development experience:
+- Provides project-specific settings and configurations
+- Enhances development workflow with Claude Code integration
+- Maintains consistent editor experience across team members
+
 ## Common Development Tasks
 
 ### Installing Aliases
